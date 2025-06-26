@@ -199,6 +199,7 @@ df_tasks["Status"] = df_tasks["Progress"].apply(lambda x: "✅ Completed" if x =
 df_tasks = filter_by_date(df_tasks)
 
 # ------------------ Employee Filter ------------------
+
 employee_list = sorted(df_tasks["AssignedTo"].unique())
 selected_employee = st.selectbox("👥 Filter by Employee", ["All"] + employee_list)
 if selected_employee != "All":
